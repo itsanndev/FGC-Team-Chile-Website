@@ -534,6 +534,14 @@ p, #achievement-description, #achievement-description2, #achievement-description
         padding: 40px 10px;
     }
 
+    #sobre-first {
+        margin-top: 170px;
+    }
+
+    #sobre-first br {
+        display: none;
+    }
+
     .container-left, .container-right {
         width: 100%;
     }
@@ -548,8 +556,12 @@ p, #achievement-description, #achievement-description2, #achievement-description
     }
 
     .text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start of the container */
         width: 100%;
     }
+
 
     .text-content p {
         font-size: 0.7em;
@@ -559,9 +571,53 @@ p, #achievement-description, #achievement-description2, #achievement-description
         margin: 20px;
     }
 
-    .actualidad-container {
-        width: 100%;
+    .content-display {
+        display: flex;
     }
+
+    .timeline-item.active .content {
+        color: green;
+        padding-left: 0px;
+        font-weight: bold;
+        transform: scale(1.2);
+        transition: transform 0.3s ease;
+    }
+
+    #title, #achievement-section-title {
+        align-items: start;
+        scale: 0.8;
+    }
+
+    .achievement-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .achievement-item {
+        margin-right: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0; /* Asegúrate de que no haya padding adicional */
+    }
+    
+    .achievement-title {
+        margin: 0; /* Elimina el margen superior e inferior del título */
+    }
+    
+    .achievement-description {
+        margin: 0; /* Elimina el margen superior e inferior del párrafo */
+    }
+    
+    .achievement-item h2 {
+        scale: 0.8;
+    }
+    
+    .achievement-item p {
+        scale: 0.7;
+    }
+    
 
     #actualidad img {
         width: 100%;
