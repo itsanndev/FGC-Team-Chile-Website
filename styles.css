@@ -68,6 +68,13 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    flex-shrink: 0;
 }
 
 #footer-logo {
@@ -75,44 +82,44 @@ footer {
     margin-right: 30px;
 }
 
-footer, .creditos {
-    height: 100px;
+.creditos {
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    z-index: 1000;
+    height: 100%;
 }
 
-footer, .redes {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    padding: 0 0px;
-    z-index: 1000;
-}
-
-footer p {
+.creditos p {
     font-weight: 600;
+    margin: 0;
 }
 
-footer span {
+.creditos span {
     color: #0C5EF6;
     font-weight: 700;
 }
 
-footer .redes p {
+.redes {
     margin-right: 30px;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-footer .redes a {
+.redes p {
+    margin-right: 30px;
+    font-weight: 600;
+}
+
+.redes a {
     margin: -10px;
     scale: 0.5;
     transition: transform 0.3s ease;
 }
 
-footer .redes a:hover {
+.redes a:hover {
     transform: translateY(-20px);
 }
+
 
 /* SOBRE FIRST SECTION */
 #sobre-first {
@@ -660,5 +667,30 @@ p, #achievement-description, #achievement-description2, #achievement-description
     .profile-img {
         width: 80px;
         height: 80px;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .creditos, .redes {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    #footer-logo {
+        margin: 0 0 10px 0;
+    }
+
+    .redes p {
+        margin-left: 10px;
+    }
+
+    .redes a {
+        margin: px;
+        scale: 0.6;
     }
 }
