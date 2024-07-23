@@ -190,37 +190,11 @@ function updateHonoree(index) {
     const descriptionElement = document.getElementById('honoree-description');
     const imgElement = document.getElementById('honoree-img');
 
-    // Añadir clases de salida (ANIMACION CSS)
-    nameElement.classList.add('slide-left-exit');
-    roleElement.classList.add('slide-left-exit');
-    descriptionElement.classList.add('slide-left-exit');
-    imgElement.classList.add('slide-left-exit');
-
     setTimeout(() => {
-        // Quitar clases de salida y añadir clases de entrada (ANIMACION CSS)
-        nameElement.classList.remove('slide-left-exit');
-        roleElement.classList.remove('slide-left-exit');
-        descriptionElement.classList.remove('slide-left-exit');
-        imgElement.classList.remove('slide-left-exit');
-
-        nameElement.classList.add('slide-left-enter');
-        roleElement.classList.add('slide-left-enter');
-        descriptionElement.classList.add('slide-left-enter');
-        imgElement.classList.add('slide-left-enter');
-
-        // Actualizar contenido después de que las clases de salida hayan sido quitadas
         nameElement.textContent = honoree.name;
         roleElement.textContent = honoree.role;
         descriptionElement.textContent = honoree.description;
         imgElement.style.backgroundImage = `url(${honoree.imageUrl})`;
-
-        setTimeout(() => {
-            // Quitar clases de entrada
-            nameElement.classList.remove('slide-left-enter');
-            roleElement.classList.remove('slide-left-enter');
-            descriptionElement.classList.remove('slide-left-enter');
-            imgElement.classList.remove('slide-left-enter');
-        }, 300);
     }, 300);
 }
 
