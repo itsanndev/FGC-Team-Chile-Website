@@ -98,7 +98,7 @@ const backgroundImages = [
     {img1: "images/trajectory/2019/foto-1.jpg", img2: "images/trajectory/2019/foto-2.jpg", img3: "images/trajectory/2019/foto-3.jpg", img4: "images/trajectory/2019/foto-4.jpg", img5: ""},
     {img1: "images/trajectory/2020/foto-1.jpg", img2: "images/trajectory/2020/foto-2.jpg", img3: "images/trajectory/2020/foto-3.jpg", img4: "", img5: ""},
     {img1: "images/trajectory/2021/foto-1.jpg", img2: "images/trajectory/2021/foto-2.jpg", img3: "", img4: "", img5: ""},
-    {img1: "images/trajectory/2022/foto-1.jpg", img2: "images/trajectory/2022/foto-2.jpg", img3: "images/trajectory/2022/foto-3.jpg", img4: "", img5: ""},
+    {img1: "images/trajectory/2022/foto-1.jpg", img2: "images/trajectory/2022/foto-2.jpg", img3: "", img4: "", img5: ""},
     {img1: "images/trajectory/2023/foto-1.jpg", img2: "images/trajectory/2023/foto-2.jpg", img3: "", img4: "", img5: ""}
 ];
 

@@ -576,7 +576,6 @@ p, #achievement-description, #achievement-description2, #achievement-description
     }
 
     .timeline-item.active .content {
-        color: green;
         padding-left: 0px;
         font-weight: bold;
         transform: scale(1.2);
