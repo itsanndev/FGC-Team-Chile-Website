@@ -176,8 +176,8 @@ updateImage(currentIndex, currentImageIndex);
 
 // HONOREES SECTION
 const honorees = [
-    {name: "Rocío Saez", role: "Mentora", description: "Descripcion para Rocio Saez", imageUrl: "images/honorees/rocio-saez.jpg"},
-    {name: "Marcelo Bravo", role: "Mentor", description: "Descripción para Marcelo Bravo", imageUrl: "images/honorees/marcelo-bravo.jpg"}
+    {name: "Rocío Saez", role: "Mentora del Team Chile", description: "Rocío Sáez es mentora del Team Chile en FIRST Global Challenge por segundo año consecutivo. Ex alumna del programa, participó en 2021 y 2022. Es titulada en Técnico Nivel Medio en Electrónica y actualmente estudia Técnico en Automatización y Robótica. También es una comprometida activista en el ámbito STEAM.", imageUrl: "images/honorees/rocio-saez.jpg"},
+    {name: "Marcelo Bravo", role: "Representante Nacional FIRST Global Challenge", description: "Marcelo Bravo es profesor de electrónica con 15 años de trayectoria en la enseñanza. Ingeniero Electrónico, Magister en educación, ha dedicado gran parte de su carrera a formar jóvenes en el ámbito de la electrónica y la robótica. Su vasta experiencia y pasión por la educación tecnológica lo convierten en una pieza clave en el desarrollo y éxito del equipo de robótica.", imageUrl: "images/honorees/marcelo-bravo.jpg"}
 ];
 
 let currentHonoreeIndex = 0;
