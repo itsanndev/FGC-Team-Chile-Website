@@ -102,7 +102,7 @@ const backgroundImages = [
     {img1: "images/trajectory/2023/foto-1.jpg", img2: "images/trajectory/2023/foto-2.jpg", img3: "", img4: "", img5: ""}
 ];
 
-let currentIndex = 0;
+let currentIndex = 6;
 let currentImageIndex = 0;
 
 function changeContent(index) {

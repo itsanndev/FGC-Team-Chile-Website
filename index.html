@@ -17,28 +17,66 @@
             <img src="images/icons/first-logo.svg" alt="FIRST logo">
         </div>
         <div class="menu">
-            <a href="#sobre-first">Sobre FIRST</a>
-            <a id="test" href="#trayectoria">Trayectoria</a>
-            <a href="#actualidad">Actualidad</a>
+            <a id="test" href="#info">Sobre FIRST</a>
+            <a href="#trayectoria">Trayectoria</a>
+            <a href="#mentores">Mentores</a>
             <a href="#colabora">Colabora</a>
         </div>
     </div>
     
-    <section id="sobre-first">
+    <div id="sobre-first">
         <div class="container-left">
-            <h1>FIRST GLOBAL CHALLENGE</h1>
-            <p>Nos llena de orgullo representar a nuestro país en el FIRST Global Challenge, una competencia internacional de robótica que reúne a talentosos  jóvenes  de más de 190 países para resolver los desafíos más apremiantes del mundo a través de la ciencia y la tecnología.</p>
-            <br>
-            <br>
-            <h1>¿QUE ES FIRST?</h1>
-            <p>Es una Olimpiada Internacional de Robótica que se celebra anualmente, reuniendo a jóvenes de todo el mundo. Lo que busca es inspirar a las próximas generaciones como agentes de cambio, infundiendo una pasión por STEM. Fomenta conocimientos técnicos y teóricos de mecánica, programación y electrónica.</p>
+            <h1>AYÚDANOS A LLEGAR A GRECIA</h1>
+            <p>La selección nacional 2024 de FIRST Global Challenge requiere de fondos para participar en la competencia de robótica más cosmopólita de la historia.</p>
+            <div class="buttons">
+                <div class="button-donate">
+                    <a href="#colabora" style="color: white;">Colaborar</a>
+                </div>
+                <div class="button-contact">
+                    <a href="#mentores">Contactar</a>
+                </div>
+            </div>
         </div>
         <div class="container-right">
             <video src="images/video-bio.mov" controls></video>
         </div>
-    </section>
-    
-    <section id="trayectoria">
+    </div>
+
+    <div class="patrocinadores-container">
+        <div class="patrocinadores">
+            <a href="https://www.minciencia.gob.cl/" target="_blank"><img src="images/patrocinadores/MICITEC.png" alt="MICITEC" class="patrocinador" style="scale: 0.6;"></a>
+            <a href="https://https://bctecnologia.com/" target="_blank"><img src="images/patrocinadores/bctecnologia.png" alt="bctecnologia" class="patrocinador"></a>
+            <a href="https://inacap.cl" target="_blank"><img src="images/patrocinadores/inacap.png" alt="inacap" class="patrocinador"></a>
+            <a href="https://redalmamater.cl/" target="_blank"><img src="images/patrocinadores/red-alma-mater-studiorum.jpeg" alt="Red Alma Mater Studiorum" class="patrocinador" style="scale: 0.8; border-radius: 100%;"></a>
+            <a href="https://redalmamater.cl/lph/" target="_blank"><img src="images/patrocinadores/hannover.png" alt="liceo hannover" class="patrocinador" style="scale: 0.6;"></a>
+            <a href="https://www.instagram.com/revolucion.steam/" target="_blank"><img src="images/patrocinadores/revolucionsteam.jpg" alt="revolucion STEAM" class="patrocinador" style="scale: 0.8; border-radius: 100%;"></a>
+        </div>
+    </div>
+
+    <div id="info">
+        <img src="images/first-demo.png" alt="" class="container-left">
+        <div class="container-right">
+            <img src="images/icons/first-white-logo.svg" alt="">
+            <p class="descripcion">FIRST es una Olimpiada Internacional de Robótica que se celebra anualmente, reuniendo a jóvenes de todo el mundo. Lo que busca es inspirar a las próximas generaciones como agentes de cambio, infundiendo una pasión por STEM. Fomenta conocimientos técnicos y teóricos de mecánica, programación y electrónica.</p>
+            <div class="features">
+                <div>
+                    <p>+190</p>
+                    <p>Paises</p>
+                </div>
+                <div>
+                    <p>26 - 29</p>
+                    <p>Septiembre</p>
+                </div>
+                <div>
+                    <p>+2.000</p>
+                    <p>Asistentes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="trayectoria">
+        <h1 class="title">Nuestra Trayectoria</h1>
         <div class="time-container">
             <div class="timeline-container">
                 <div class="timeline">
@@ -74,9 +112,13 @@
             </div>
             <div class="content-display">
                 <div class="image-selector">
-                    <img src="images/icons/arrow.svg" alt="" class="left-arrow" id="left-arrow-image-selector">       
+                    <div class="arrow-container">
+                        <img src="images/icons/arrow.svg" alt="" class="left-arrow" id="left-arrow-image-selector">       
+                    </div>
                     <div id="img"></div>
-                    <img src="images/icons/arrow.svg" alt="" class="right-arrow" id="right-arrow-image-selector">
+                    <div class="arrow-container">
+                        <img src="images/icons/arrow.svg" alt="" class="right-arrow" id="right-arrow-image-selector">    
+                    </div>
                 </div>
                 <div class="text-content">
                     <h1 id="title">Title</h1>
@@ -99,18 +141,67 @@
                 </div>
             </div>    
         </div>
-    </section>
+    </div>
 
-    <section id="actualidad">
-        <div class="actualidad-container">
-            <img src="images/atenas2024.jpg" alt="atenas">
-            <h1>26 - 29 de Septiembre 2024</h1>
-            <p>Estudiantes de más de 190 países se unirán en Atenas, Grecia. Como la cuna de los antiguos y modernos Juegos Olímpicos, nos enorgullece reunir al mundo en una ciudad con una rica historia de colaboración internacional y deportes globales.
-                FIRST Global cree que al hacer que la ciencia y la tecnología sean tan emocionantes como cualquier otro deporte, podemos inspirar a los dos mil millones de jóvenes del mundo a seguir carreras en campos STEM y ser los líderes que colectivamente resuelvan los problemas más urgentes de nuestro planeta.</p>
+    <div id="mentores">
+        <h1 class="title">Nuestros mentores</h1>
+        <div class="mentores-container">
+            <div class="mentores">
+                <div class="mentor">
+                    <div class="mentor-content">
+                        <img src="images/cards/marcelo-bravo.jpg" class="mentores-img">
+                        <h2 class="nombre">Marcelo Bravo</h2>
+                        <p class="correo">mbravo@firstglobalchile.com</p>
+                        <div class="descripcion">
+                            <p>Profesor de electrónica con 15 años de trayectoria en la enseñanza. Ingeniero Electrónico, Magister en educación, ha dedicado gran parte de su carrera a formar jóvenes en el ámbito de la electrónica y la robótica. Su vasta experiencia y pasión por la educación tecnológica lo convierten en una pieza clave en el desarrollo y éxito del equipo de robótica.</p>
+                        </div>
+                        <div class="rrss">
+                            <a href="https://www.instagram.com/profe_marcelo_bravop/" target="_blank"><img src="images/icons/instagram-icon.svg" alt="instagram"></a>
+                            <a href="https://cl.linkedin.com/in/marcelo-bravo-painen-0a6092254" target="_blank"><img src="images/icons/linkedin-icon.svg" alt="linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mentor">
+                    <div class="mentor-content">
+                        <img src="images/cards/rocio-saez.jpg" class="mentores-img">
+                        <h2 class="nombre">Rocio Saez</h2>
+                        <p class="correo">rocio@firstglobalchile.com</p>
+                        <p>Mentora del Team Chile en FIRST Global Challenge por segundo año consecutivo. Participó como seleccionada durante 2021 (Virtual) y 2022 (Suiza). Titulada en Técnico en Electrónica y actualmente estudiante de Técnico en Automatización y Robótica. Comprometida activista STEAM, fue destacada por Evolución TP en INACAP y reconocida por el programa Luksic-Más Mujeres en STEM.</p>
+                        <div class="rrss">
+                            <a href="https://www.instagram.com/dewtrol/" target="_blank"><img src="images/icons/instagram-icon.svg" alt="instagram"></a>
+                            <a href="https://cl.linkedin.com/in/roc%C3%ADo-s%C3%A1ez-benavides-b7519a27b" target="_blank"><img src="images/icons/linkedin-icon.svg" alt="instagram"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mentor">
+                    <div class="mentor-content">
+                        <img src="images/cards/felipe-pickenpack.jpg" class="mentores-img">
+                        <h2 class="nombre">Felipe Pickenpack</h2>
+                        <p class="correo">picken@firstglobalchile.com</p>
+                        <p>Ingeniero civil electricista con un MSc en Ingeniería Eléctrica y Electrónica de la Pontificia Universidad Católica de Chile. Posee habilidades técnicas en gestión de operaciones, continuidad operacional y desarrollo de proyectos. Ha sido mentor principal de Team Chile en FIRST Global por más de seis años, destacando su compromiso con la educación y la promoción de STEM en la juventud chilena.</p>
+                        <div class="rrss">
+                            <a href="https://www.instagram.com/fpicken/" target="_blank"><img src="images/icons/instagram-icon.svg" alt="instagram"></a>
+                            <a href="https://cl.linkedin.com/in/felipe-pickenpack-morales-02785041" target="_blank"><img src="images/icons/linkedin-icon.svg" alt="instagram"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mentor">
+                    <div class="mentor-content">
+                        <img src="images/cards/andrea-arias.jpg" class="mentores-img">
+                        <h2 class="nombre">Andrea Arias</h2>
+                        <p class="correo">andrea@firstglobalchile.com</p>
+                        <p>Estudiante de Ingeniería Civil en Obras Civiles en la Universidad de Santiago de Chile y ayudante de laboratorio de Tecnología del Hormigón. Andrea es mentora en PROVOCA AUI/NRAO, coordina en Revolución STEAM y el Movimiento Efecto Naranja. Como divulgadora científica, gestiona Oscilandoo y trabaja como community manager. Activista STEAM, impulsa la participación femenina en ciencias e ingeniería.</p>
+                        <div class="rrss">
+                            <a href="https://www.instagram.com/oops.andreita/" target="_blank"><img src="images/icons/instagram-icon.svg" alt="instagram"></a>
+                            <a href="https://cl.linkedin.com/in/andrea-arias-medrano-069b9a298" target="_blank"><img src="images/icons/linkedin-icon.svg" alt="instagram"></a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </div>
-    </section>
+    </div>
 
-    <section id="colabora">
+    <div id="colabora">
         <div class="container-left">
             <h1>SE PARTE DEL CAMBIO</h1>
             <p></p>
@@ -126,63 +217,31 @@
             <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.2/build/spline-viewer.js"></script>
             <spline-viewer url="https://prod.spline.design/li3gFDDA5p5cqMQr/scene.splinecode"></spline-viewer>
         </div>
-    </section>
-    
-    <section>
-        <div class="cards">
-            <div class="card">
-                <img src="images/cards/marcelo-bravo.jpg" alt="Marcelo Bravo" class="profile-img">
-                <div class="card-content">
-                    <h1>MARCELO BRAVO</h1>
-                    <p>Mentor de robótica</p>
-                    <p class="email"><img src="images/icons/mail.svg" alt="Email Icon"> mbravo@firstglobalchile.com</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/cards/rocio-saez.jpg" alt="Rocio Saez" class="profile-img">
-                <div class="card-content">
-                    <h1>Rocío Saez</h1>
-                    <p>Mentora de robótica</p>
-                    <p class="email"><img src="images/icons/mail.svg" alt="Email Icon"> rocio@firstglobalchile.com</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/cards/felipe-pickenpack.jpg" alt="Felipe Pickenpack" class="profile-img">
-                <div class="card-content">
-                    <h1>Felipe Pickenpack</h1>
-                    <p>Mentor de robótica</p>
-                    <p class="email"><img src="images/icons/mail.svg" alt="Email Icon"> picken@firstglobalchile.com</p>
-                </div>
-            </div>
-        </div>
-        <div class="patrocinadores-container">
-            <div class="patrocinadores">
-                <a href="https://www.minciencia.gob.cl/" target="_blank"><img src="images/patrocinadores/MICITEC.png" alt="MICITEC" class="patrocinador" style="scale: 0.6;"></a>
-                <a href="https://https://bctecnologia.com/" target="_blank"><img src="images/patrocinadores/bctecnologia.png" alt="bctecnologia" class="patrocinador"></a>
-                <a href="https://inacap.cl" target="_blank"><img src="images/patrocinadores/inacap.png" alt="inacap" class="patrocinador"></a>
-                <a href="https://redalmamater.cl/" target="_blank"><img src="images/patrocinadores/red-alma-mater-studiorum.jpeg" alt="Red Alma Mater Studiorum" class="patrocinador" style="scale: 0.8; border-radius: 100%;"></a>
-                <a href="https://redalmamater.cl/lph/" target="_blank"><img src="images/patrocinadores/hannover.png" alt="liceo hannover" class="patrocinador" style="scale: 0.6;"></a>
-                <a href="https://www.instagram.com/revolucion.steam/" target="_blank"><img src="images/patrocinadores/revolucionsteam.jpg" alt="revolucion STEAM" class="patrocinador" style="scale: 0.8; border-radius: 100%;"></a>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <section id="mentions">
-        <div class="mentions-container-left">
-            <div id="honoree-img"></div>
-        </div>
-        <div class="mentions-container-right">
-            <div class="mentions-text">
-                <h1 id="honoree-name">NOMBRE</h1>
-                <h2 id="honoree-role">Rol</h2>
-                <p id="honoree-description">Descripcion</p>
+    <div id="mentions">
+        <h1 class="title">Menciones Honrosas</h1>
+        <div class="mentions-container">
+            <div class="mentions-container-left">
+                <div id="honoree-img"></div>
             </div>
-            <div class="selector-fotos">
-                <img src="images/icons/arrow.svg" alt="flecha izquierda" id="left-arrow" class="left-arrow">
-                <img src="images/icons/arrow.svg" alt="flecha derecha" id="right-arrow" class="right-arrow">
-            </div>    
-        </div>
-    </section>
+            <div class="mentions-container-right">
+                <div class="mentions-text">
+                    <h1 id="honoree-name">NOMBRE</h1>
+                    <h2 id="honoree-role">Rol</h2>
+                    <p id="honoree-description">Descripcion</p>
+                </div>
+                <div class="selector-fotos">
+                    <div class="arrow-container">
+                        <img src="images/icons/arrow.svg" alt="flecha izquierda" id="left-arrow" class="left-arrow">
+                    </div>
+                    <div class="arrow-container">
+                        <img src="images/icons/arrow.svg" alt="flecha derecha" id="right-arrow" class="right-arrow">
+                    </div>                
+                </div>    
+            </div>
+        </div>  
+    </div>
 
     <footer>
         <div class="creditos">

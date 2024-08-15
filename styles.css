@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+* {
+    box-sizing: border-box;
+}
 body, html {
     margin: 0;
     padding: 0;
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
     height: 100%;
     background-color: #E3F7FF;
@@ -120,9 +121,42 @@ footer {
     transform: translateY(-20px);
 }
 
+/* BUTTONS */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+}
+
+.buttons div {
+    display: flex;
+    margin: 10px;
+    padding: 0px 20px 0px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.buttons a {
+    font-weight: 600;
+    text-align: center; /* Asegura que el texto dentro del enlace esté centrado */
+    width: 100%; /* Asegura que el enlace ocupe todo el espacio disponible en el div */
+    display: flex; /* Habilita Flexbox en el enlace (si es necesario) */
+    justify-content: center; 
+    align-items: center; 
+}
+
+.button-donate {
+    background-color: #0057ED;
+}
+
+.button-contact {
+    background-color: white;
+    color: #0057ED;
+}
 
 /* SOBRE FIRST SECTION */
 #sobre-first {
+    background: linear-gradient(45deg, #FFFFFF 0%, #BCBCBC 100%);
     display: flex;
     flex-wrap: wrap;
     padding: 80px 20px 20px;
@@ -153,13 +187,67 @@ video {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* TRAYECTORIA SECTION */
-#trayectoria {
+/* INFO */
+#info {
+    background-color: #0057ED;
+    height: 80vh;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#info .container-left {
+    width: auto;
+    height: 100%;
+}
+
+#info .container-right {
+    height: 100%;
+    flex-direction: column;
+    background-color: #0057ED;
+    color: white;
+}
+
+#info .descripcion {
+    margin: 50px;
+    justify-content: center;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+}
+
+.features div {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    margin: 20px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+.features div p {
+    font-weight: bold;
+    margin: 2px;
+}
+
+/* TRAYECTORIA SECTION */
+#trayectoria {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#trayectoria .title {
+    margin-top: 40px;
+    color: black;
+    font-weight: 800;
 }
 
 .time-container {
@@ -287,32 +375,97 @@ h1, h2, p {
     margin-right: 30px;
 }
 
-/* ACTUALIDAD SECTION */
-#actualidad {
+/* MENTORES SECTION */
+
+#mentores .title {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#mentores {
+    background-color: #0057ED;
+    min-height: 80vh;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px 20px;
+    padding: 20px;
 }
 
-#actualidad img {
+.mentores {
+    display: flex;
+    gap: 20px;
+}
+
+.mentores-container {
+    height: 550px;
     width: 100%;
-    border-radius: 35px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
 }
 
-.actualidad-container {
-    flex: 1;
+.mentor {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 300px;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos hijos se dispongan en columna */
+    align-items: center;
+    text-align: center; 
+    overflow: hidden; 
+}
+
+.mentores-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.mentor-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word; /* Asegura que las palabras largas se dividan correctamente */
+    overflow-wrap: break-word; /* Maneja el desbordamiento de texto */
+    flex-grow: 1; /* Permite que el contenido principal ocupe el espacio disponible */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 60%;
+}
+
+#mentores .nombre {
+    color: black;
+    font-size: 1.2em;
+    margin: 10px 0; /* Espaciado entre los elementos */
+}
+
+#mentores .correo {
+    color: #0057ED;
+    margin-bottom: 10px; /* Espaciado entre los elementos */
+}
+
+.descripcion {
+    height: 230px;
+}
+
+.rrss img {
+    scale: 0.5;
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.rrss img:hover {
+    transform: scale(0.8); /* Efecto de zoom en hover */
 }
 
 /* COLABORA SECTION */
 #colabora {
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     padding: 80px 20px 20px;
@@ -323,53 +476,13 @@ h1, h2, p {
     flex: 1;
 }
 
-/* CARDS */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 0;
-}
-
-.card {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 35px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    width: calc(100% - 30px);
-    max-width: 400px;
-}
-
-.profile-img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.card p img {
-    margin-right: 5px;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-content .email {
-    display: flex;
-    color: #666;
-}
 
 /* PATROCINADORES */
 .patrocinadores-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 .patrocinadores {
@@ -394,13 +507,27 @@ h1, h2, p {
 
 /* MENCIONES(HONOREES) SECTION */
 #mentions {
-    height: 60vh;
-    margin-top: 40px;
+    background-color: #0057ED;
     display: flex;
-    flex-wrap: wrap;
-    padding: 80px 20px 20px;
+    align-items: center; /* Centra verticalmente (si es necesario) */
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    height: 100%; /* Si necesitas centrar también verticalmente */
 }
 
+#mentions .title {
+    color: white;
+    margin-top: 40px;
+}
+
+.mentions-container {
+    margin: 20px;
+    background-color: white;
+    border-radius: 40px;
+    height: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
 .mentions-container-left {
     flex: 1;
     display: flex;
@@ -419,6 +546,7 @@ h1, h2, p {
 }
 
 .mentions-container-right {
+    margin: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -435,15 +563,25 @@ h1, h2, p {
     display: flex;
     width: 80%;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .left-arrow,
 .right-arrow {
     cursor: pointer;
+    scale: 0.8;
 }
 
 .right-arrow {
     transform: rotate(180deg);
+}
+
+.arrow-container {
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: 0px 15px 15.5px -1px rgba(0, 0, 0, 0.25);
+    width: 80px;
+    height: 80px;
 }
 
 /* CUSTOMIZAR TEXTO */
@@ -542,6 +680,12 @@ p, #achievement-description, #achievement-description2, #achievement-description
         display: none;
     }
 
+    .button-donate {
+        background-color: #0057ED; 
+        border-radius: 25px;
+        font-weight: 600;
+    }
+
     .container-left, .container-right {
         width: 100%;
     }
@@ -617,11 +761,6 @@ p, #achievement-description, #achievement-description2, #achievement-description
         scale: 0.7;
     }
     
-
-    #actualidad img {
-        width: 100%;
-        height: auto;
-    }
 
     .mentions-container-left, .mentions-container-right {
         width: 100%;
