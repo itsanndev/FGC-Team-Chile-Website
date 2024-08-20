@@ -454,6 +454,7 @@ h1, h2, p {
     height: 230px;
 }
 
+
 .rrss img {
     scale: 0.5;
     transition: transform 0.3s ease; /* Transición suave al hacer hover */
@@ -644,11 +645,6 @@ p, #achievement-description, #achievement-description2, #achievement-description
     .container-left p {
         width: 100%;
     }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 @media (max-width: 768px) {
@@ -821,14 +817,6 @@ p, #achievement-description, #achievement-description2, #achievement-description
 
     .image-selector {
         height: 100px;
-    }
-
-    .cards {
-        padding: 20px 0;
-    }
-
-    .card {
-        width: calc(100% - 20px);
     }
 
     .profile-img {
