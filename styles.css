@@ -2,6 +2,7 @@
 * {
     box-sizing: border-box;
 }
+
 body, html {
     margin: 0;
     padding: 0;
@@ -181,8 +182,8 @@ footer {
     align-items: center;
 }
 
-video {
-    width: 100%;
+iframe {
+    width: 90%;
     border-radius: 35px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -191,14 +192,13 @@ video {
 #info {
     background-color: #0057ED;
     height: 80vh;
-    margin-top: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 #info .container-left {
-    width: auto;
+    width: fit-content;
     height: 100%;
 }
 
@@ -236,34 +236,35 @@ video {
 
 /* TRAYECTORIA SECTION */
 #trayectoria {
-    background: white;
+    background: green;
+    height: 120vh;
     display: flex;
     flex-direction: column;
-    height: 110vh;
     justify-content: center;
     align-items: center;
 }
 
 #trayectoria .title {
-    margin-top: 40px;
     color: black;
     font-weight: 800;
 }
 
 .time-container {
+    background-color: blue;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100%;
-    box-sizing: border-box;
 }
 
 .timeline-container {
+    background-color: red;
     width: 15%;
     display: flex;
     align-items: center;
-    height: 80%;
     flex-direction: column;
+    height: 100%;
 }
 
 .timeline-container::-webkit-scrollbar {
@@ -324,15 +325,17 @@ video {
 }
 
 .content-display {
+    background-color: transparent;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: 2%;
-    margin-top: 80px;
-    height: 90%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-selector {
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -384,11 +387,11 @@ h1, h2, p {
 
 #mentores {
     background-color: #0057ED;
-    min-height: 80vh;
+    min-height: fit-content;
     margin-top: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
 }
@@ -396,14 +399,16 @@ h1, h2, p {
 .mentores {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas si es necesario */
+    justify-content: center; /* Centrar los elementos cuando hay más espacio disponible */
 }
 
 .mentores-container {
-    height: 550px;
     width: 100%;
     justify-content: center;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas si es necesario */
 }
 
 .mentor {
@@ -413,10 +418,11 @@ h1, h2, p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     max-width: 300px;
     display: flex;
-    flex-direction: column; /* Asegura que los elementos hijos se dispongan en columna */
+    flex-direction: column;
     align-items: center;
     text-align: center; 
     overflow: hidden; 
+    margin-bottom: 20px; /* Añadir margen inferior para evitar que los elementos se junten demasiado en pantallas pequeñas */
 }
 
 .mentores-img {
@@ -424,16 +430,16 @@ h1, h2, p {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 20px;
 }
 
 .mentor-content {
     width: 100%;
     margin: 0;
     padding: 0;
-    word-wrap: break-word; /* Asegura que las palabras largas se dividan correctamente */
-    overflow-wrap: break-word; /* Maneja el desbordamiento de texto */
-    flex-grow: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -442,26 +448,31 @@ h1, h2, p {
 #mentores .nombre {
     color: black;
     font-size: 1.2em;
-    margin: 10px 0; /* Espaciado entre los elementos */
+    margin: 10px 0;
 }
 
 #mentores .correo {
     color: #0057ED;
-    margin-bottom: 10px; /* Espaciado entre los elementos */
+    margin-bottom: 10px;
 }
 
 .descripcion {
     height: 230px;
 }
 
+.rrss {
+    display: flex;
+    justify-content: center; /* Centrar los íconos de redes sociales */
+    gap: 10px; /* Añadir espacio entre los íconos */
+}
 
 .rrss img {
     scale: 0.5;
-    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+    transition: transform 0.3s ease;
 }
 
 .rrss img:hover {
-    transform: scale(0.8); /* Efecto de zoom en hover */
+    transform: scale(0.8);
 }
 
 /* COLABORA SECTION */
@@ -521,7 +532,7 @@ h1, h2, p {
 }
 
 .mentions-container {
-    margin: 20px;
+    margin: 2px;
     background-color: white;
     border-radius: 40px;
     height: 500px;
@@ -631,23 +642,84 @@ p, #achievement-description, #achievement-description2, #achievement-description
     transform: translateY(0);
 }
 
-/* DISEÑO RESPONSIVE */
-@media (max-width: 1200px) {
+/* MEDIA QUERIES PARA RESPONSIVE DESIGN */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+
+    #info .container-left {
+        width: 100%;
+    }
+    .mentores {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .mentor {
+        max-width: 45%; /* Ajustar el ancho para tablets */
+        margin-bottom: 20px;
+    }
+
+    .descripcion {
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
+    }
+}
+
+@media screen and (max-width: 1000px) {
+ 
+}
+/* Tablets */
+@media screen and (max-width: 768px) {
+
+    #sobre-first {
+        margin-top: 50px;
+    }
+
+    #sobre-first .container-left {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     #sobre-first, #colabora {
         flex-direction: column;
-        align-items: center;
     }
 
     .container-left, .container-right {
         width: 100%;
     }
 
-    .container-left p {
+    #mentions {
+       height: fit-content; 
+    }
+
+
+    .mentions-container {
+        flex-direction: column;
+        
+    }
+
+    .mentions-container-left {
+        height: 100px;
+        background-color: red;
+    }
+
+    .mentions-container-left, .mentions-container-right {
         width: 100%;
     }
-}
 
-@media (max-width: 768px) {
+    .mentions-container-right {
+        justify-items: center;
+        align-items: center;
+    }
+
+    .mentions-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .navbar {
         flex-direction: column;
         height: auto;
@@ -655,197 +727,71 @@ p, #achievement-description, #achievement-description2, #achievement-description
     }
 
     .menu {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    .menu a {
-        margin: 5px 0;
-    }
-
-    #sobre-first, #colabora {
-        padding: 40px 10px;
-    }
-
-    #sobre-first {
-        margin-top: 170px;
-    }
-
-    #sobre-first br {
-        display: none;
-    }
-
-    .button-donate {
-        background-color: #0057ED; 
-        border-radius: 25px;
-        font-weight: 600;
-    }
-
-    .container-left, .container-right {
-        width: 100%;
-    }
-
-    video {
-        width: 100%;
-        height: auto;
-    }
-
-    .image-selector {
-        height: 100px;
-    }
-
-    .text-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* Align items to the start of the container */
-        width: 100%;
-    }
-
-
-    .text-content p {
-        font-size: 0.7em;
-    }
-
-    .timeline-item {
-        margin: 20px;
-    }
-
-    .content-display {
-        display: flex;
-    }
-
-    .timeline-item.active .content {
-        padding-left: 0px;
-        font-weight: bold;
-        transform: scale(1.2);
-        transition: transform 0.3s ease;
-    }
-
-    #title, #achievement-section-title {
-        align-items: start;
-        scale: 0.8;
-    }
-
-    .achievement-container {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    
-    .achievement-item {
-        margin-right: 10px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 0; /* Asegúrate de que no haya padding adicional */
-    }
-    
-    .achievement-title {
-        margin: 0; /* Elimina el margen superior e inferior del título */
-    }
-    
-    .achievement-description {
-        margin: 0; /* Elimina el margen superior e inferior del párrafo */
-    }
-    
-    .achievement-item h2 {
-        scale: 0.8;
-    }
-    
-    .achievement-item p {
-        scale: 0.7;
-    }
-    
-
-    .mentions-container-left, .mentions-container-right {
-        width: 100%;
-    }
-
-    .mentions-container-right h1, .mentions-container-right h2, .mentions-container-right p {
-        width: 100%;
-    }
-
-    .selector-fotos {
-        width: 100%;
-    }
-
-    .left-arrow, .right-arrow {
-        width: 30px;
-        height: 30px;
-    }
-
-    .patrocinadores {
-        flex-direction: column;
+        padding: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.2em;
-    }
-
-    h2, p {
-        font-size: 0.8em;
-    }
-
+/* Smartphones */
+@media screen and (max-width: 480px) {
     .navbar {
-        padding: 10px 5px;
-    }
-
-    .menu a {
-        margin: 3px 0;
-        font-size: 0.9em;
-    }
-
-    #sobre-first, #colabora {
-        padding: 20px 5px;
-    }
-
-    #sobre-first {
-        margin-top: 160px;
-    }
-
-    #sobre-first br {
-        display: none;
-    }
-
-    video {
-        width: 100%;
-        height: auto;
-    }
-
-    .image-selector {
-        height: 100px;
-    }
-
-    .profile-img {
-        width: 80px;
-        height: 80px;
-    }
-
-    footer {
-        flex-direction: column;
         height: auto;
         padding: 10px;
     }
 
-    .creditos, .redes {
-        width: 100%;
-        justify-content: center;
+    .menu {
         padding: 10px 0;
+        flex-direction: column;
     }
 
-    #footer-logo {
-        margin: 0 0 10px 0;
+    #sobre-first {
+        margin-top: 100px;
     }
 
-    .redes p {
-        margin-left: 10px;
+    .buttons {
+        flex-direction: column;
+        height: auto;
     }
 
-    .redes a {
-        margin: px;
-        scale: 0.6;
+    .button-donate, .button-contact {
+        width: 100%;
+        height: 50px;
+    }
+
+    iframe {
+        height: 250px;
+    }
+
+    #info {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .selector-fotos {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .achievement-description {
+        visibility: hidden;
+    }
+
+    .mentores {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mentor {
+        max-width: 90%; /* Ajustar el ancho para móviles */
+        margin-bottom: 20px;
+    }
+
+    .descripcion {
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
+    }
+
+    .rrss {
+        justify-content: center;
     }
 }
