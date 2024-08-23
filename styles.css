@@ -702,7 +702,7 @@ p, #achievement-description, #achievement-description2, #achievement-description
 
     .mentions-container-left {
         height: 100px;
-        background-color: red;
+        background-color: transparent;
     }
 
     .mentions-container-left, .mentions-container-right {
