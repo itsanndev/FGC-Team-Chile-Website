@@ -236,7 +236,7 @@ iframe {
 
 /* TRAYECTORIA SECTION */
 #trayectoria {
-    background: green;
+    background: transparent;
     height: 120vh;
     display: flex;
     flex-direction: column;
@@ -250,7 +250,7 @@ iframe {
 }
 
 .time-container {
-    background-color: blue;
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -259,7 +259,7 @@ iframe {
 }
 
 .timeline-container {
-    background-color: red;
+    background-color: transparent;
     width: 15%;
     display: flex;
     align-items: center;
