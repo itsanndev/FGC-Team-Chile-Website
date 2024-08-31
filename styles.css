@@ -81,7 +81,6 @@ footer {
 
 #footer-logo {
     max-height: 80px;
-    margin-right: 30px;
 }
 
 .creditos {
@@ -101,7 +100,6 @@ footer {
 }
 
 .redes {
-    margin-right: 30px;
     display: flex;
     align-items: center;
     height: 100%;
@@ -188,35 +186,52 @@ iframe {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* INFO */
 #info {
+    height: fit-content;
+    width: 100%;
     background-color: #0057ED;
-    height: 80vh;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+}
+
+#first-info-logo {
+    width: 70%;
 }
 
 #info .container-left {
-    width: fit-content;
-    height: 100%;
+    width: 50%;
+}
+
+#info .container-left img {
+    margin: 20px;
+    border-radius: 25px;
 }
 
 #info .container-right {
-    height: 100%;
-    flex-direction: column;
-    background-color: #0057ED;
-    color: white;
+    width: 50%;
+    display: flex;
+    align-items: center; /* Centrar contenido verticalmente */
+    justify-content: center; /* Centrar contenido horizontalmente */
 }
 
-#info .descripcion {
-    margin: 50px;
-    justify-content: center;
+#info .container-right .content { 
+    width: 80%;
+    max-width: 100%; /* Evitar que el contenido se expanda más allá del padre */
+    color: white;
+    box-sizing: border-box; /* Incluir padding y border en el ancho */
+    display: flex;
+    flex-direction: column; /* Asegurar que los hijos se posicionen en columna */
+    align-items: center; /* Centrar los hijos horizontalmente */
+    justify-content: center; /* Centrar los hijos verticalmente */
 }
 
 .features {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Asegurar que los elementos ocupen espacio disponible sin salirse */
+    width: 100%;
+    box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho */
 }
 
 .features div {
@@ -227,6 +242,7 @@ iframe {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 100%; /* Evitar que los elementos individuales se expandan demasiado */
 }
 
 .features div p {
@@ -236,8 +252,7 @@ iframe {
 
 /* TRAYECTORIA SECTION */
 #trayectoria {
-    background: transparent;
-    height: 120vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -250,21 +265,18 @@ iframe {
 }
 
 .time-container {
-    background-color: transparent;
+    min-height: 90vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    justify-content: start;
+    height: fit-content;
 }
 
 .timeline-container {
-    background-color: transparent;
-    width: 15%;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    height: 100%;
+    align-items: center;
+    width: 100px;
 }
 
 .timeline-container::-webkit-scrollbar {
@@ -325,17 +337,15 @@ iframe {
 }
 
 .content-display {
-    background-color: transparent;
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: fit-content;
     justify-content: center;
     align-items: center;
 }
 
 .image-selector {
-    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -346,7 +356,7 @@ iframe {
 
 #img {
     width: 50%;
-    height: 100%;
+    min-height: 300px;
     border-radius: 35px;
     background-size: cover;
     background-position: center;
@@ -369,12 +379,14 @@ h1, h2, p {
 .achievement-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
 }
 
 .achievement-item {
     position: relative;
     width: auto;
-    height: 140px;
+    height: fit-content;
     margin-right: 30px;
 }
 
@@ -477,9 +489,10 @@ h1, h2, p {
 
 /* COLABORA SECTION */
 #colabora {
+    height: fit-content;
     background-color: white;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 80px 20px 20px;
     gap: 20px;
 }
@@ -546,6 +559,7 @@ h1, h2, p {
     justify-content: center;
     align-items: center;
     width: 60%;
+    min-height: 200px;
 }
 
 #honoree-img {
@@ -647,9 +661,12 @@ p, #achievement-description, #achievement-description2, #achievement-description
 /* Tablets */
 @media screen and (max-width: 768px) {
 
-    #info .container-left {
-        width: 100%;
+    .achievement-container {
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content;
     }
+
     .mentores {
         flex-direction: row;
         justify-content: center;
@@ -666,9 +683,6 @@ p, #achievement-description, #achievement-description2, #achievement-description
     }
 }
 
-@media screen and (max-width: 1000px) {
- 
-}
 /* Tablets */
 @media screen and (max-width: 768px) {
 
@@ -690,20 +704,45 @@ p, #achievement-description, #achievement-description2, #achievement-description
         width: 100%;
     }
 
+    #info {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #info .container-left {
+        width: 100%;
+        align-items: center;
+    }
+
+    #info .container-left img {
+        width: 400px;
+    }
+
+    #info .container-right {
+        width: 100%;
+        display: flex;
+        align-items: center; /* Centrar contenido verticalmente */
+        justify-content: center; /* Centrar contenido horizontalmente */
+    }
+
+
     #mentions {
        height: fit-content; 
+       padding: 20px;
     }
 
 
     .mentions-container {
         flex-direction: column;
-        
+        height: fit-content;
     }
 
-    .mentions-container-left {
-        height: 100px;
-        background-color: transparent;
+    #honoree-img {
+        background-size: cover;
+        min-height: 300px;
+        margin: 20px;
     }
+
 
     .mentions-container-left, .mentions-container-right {
         width: 100%;
@@ -740,9 +779,23 @@ p, #achievement-description, #achievement-description2, #achievement-description
         padding: 10px;
     }
 
+    spline-viewer {
+        height: 600px;
+    }
+
     .menu {
         padding: 10px 0;
         flex-direction: column;
+    }
+
+    footer {
+        height: fit-content;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #footer-logo {
+        scale: 0.8;
     }
 
     #sobre-first {
@@ -763,20 +816,85 @@ p, #achievement-description, #achievement-description2, #achievement-description
         height: 250px;
     }
 
-    #info {
+    .features {
         flex-direction: column;
-        height: auto;
     }
 
-    .selector-fotos {
+    .image-selector {
+        height: 200px;
+        
+    }
+
+    #trayectoria {
+        height: fit-content;
+    }
+
+    #trayectoria .arrow-container{
+        scale: 0.5;
+        display: none;
+    }
+
+    .image-selector {
+        height: fit-content;
+    }
+
+    .image-selector #img {
+        height: 150px;
+        width: 100%;      
+    }
+
+
+
+    .time-container {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .timeline-container {
+        height: 90px;
+        width: 100%;
+
+    }
+
+    .timeline {
         flex-direction: row;
+        width: 100%;
         justify-content: space-between;
     }
 
-    .achievement-description {
-        visibility: hidden;
+    .timeline-item {
+        flex-direction: column;
+      
     }
 
+    .timeline-item .dot {
+        margin-right: 0px;
+    }
+
+    .timeline-item.active .dot {
+        transform: scale(1.3);
+    }
+
+    .timeline-item.active .content {
+        transform: scale(1);
+    }
+
+    .timeline-item.active .dot, .timeline-item.active .content {
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+
+    .achievement-container {
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content;
+    }
+
+    .achievement-item {
+        margin-right: 0px;
+    }
+  
     .mentores {
         flex-direction: column;
         align-items: center;
@@ -793,5 +911,10 @@ p, #achievement-description, #achievement-description2, #achievement-description
 
     .rrss {
         justify-content: center;
+    }
+
+    .selector-fotos {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
