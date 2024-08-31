@@ -411,8 +411,8 @@ h1, h2, p {
 .mentores {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas si es necesario */
-    justify-content: center; /* Centrar los elementos cuando hay más espacio disponible */
+    flex-wrap: wrap; 
+    justify-content: center;
 }
 
 .mentores-container {
@@ -420,7 +420,7 @@ h1, h2, p {
     justify-content: center;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas si es necesario */
+    flex-wrap: wrap; 
 }
 
 .mentor {
@@ -434,7 +434,7 @@ h1, h2, p {
     align-items: center;
     text-align: center; 
     overflow: hidden; 
-    margin-bottom: 20px; /* Añadir margen inferior para evitar que los elementos se junten demasiado en pantallas pequeñas */
+    margin-bottom: 20px;
 }
 
 .mentores-img {
@@ -474,8 +474,8 @@ h1, h2, p {
 
 .rrss {
     display: flex;
-    justify-content: center; /* Centrar los íconos de redes sociales */
-    gap: 10px; /* Añadir espacio entre los íconos */
+    justify-content: center;
+    gap: 10px; 
 }
 
 .rrss img {
@@ -534,9 +534,9 @@ h1, h2, p {
 #mentions {
     background-color: #0057ED;
     display: flex;
-    align-items: center; /* Centra verticalmente (si es necesario) */
-    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-    height: 100%; /* Si necesitas centrar también verticalmente */
+    align-items: center; 
+    flex-direction: column; 
+    height: 100%; 
 }
 
 #mentions .title {
@@ -661,30 +661,17 @@ p, #achievement-description, #achievement-description2, #achievement-description
 /* Tablets */
 @media screen and (max-width: 768px) {
 
-    .achievement-container {
+    .navbar {
         flex-direction: column;
-        justify-content: space-between;
-        height: fit-content;
+        height: auto;
+        padding: 10px;
     }
 
-    .mentores {
-        flex-direction: row;
-        justify-content: center;
+    .menu {
+        padding: 10px 0;
         flex-wrap: wrap;
+        justify-content: center;
     }
-
-    .mentor {
-        max-width: 45%; /* Ajustar el ancho para tablets */
-        margin-bottom: 20px;
-    }
-
-    .descripcion {
-        height: auto; /* Permitir que la altura se ajuste automáticamente */
-    }
-}
-
-/* Tablets */
-@media screen and (max-width: 768px) {
 
     #sobre-first {
         margin-top: 50px;
@@ -759,16 +746,25 @@ p, #achievement-description, #achievement-description2, #achievement-description
         align-items: center;
     }
 
-    .navbar {
+    .achievement-container {
         flex-direction: column;
-        height: auto;
-        padding: 10px;
+        justify-content: space-between;
+        height: fit-content;
     }
 
-    .menu {
-        padding: 10px 0;
-        flex-wrap: wrap;
+    .mentores {
+        flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .mentor {
+        max-width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .descripcion {
+        height: auto; 
     }
 }
 
