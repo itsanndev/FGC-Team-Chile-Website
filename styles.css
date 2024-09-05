@@ -714,8 +714,6 @@ p, #achievement-description, #achievement-description2, #achievement-description
         width: 100%;
     }
 
-    /* fuckin shit*/
-
     .container-premios {
         flex-direction: column;
     }
