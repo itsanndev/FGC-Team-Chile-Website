@@ -178,7 +178,7 @@ updateImage(currentIndex, currentImageIndex);
 const honorees = [
     {name: "Rocío Saez", role: "Mentora del Team Chile", description: "Rocío Sáez mentora del Team Chile en FIRST Global Challenge por segundo año consecutivo. Participó en 2021(Virtual) y 2022 (Suiza). Es titulada en Técnico en Electrónica y actualmente estudia Técnico en Automatización y Robótica. Es una comprometida activista en el ámbito STEAM. Además fue destacada por Evolución Tp en Inacap, ademas reconocida  por el programa Luksic-Más Mujeres en STEM.", imageUrl: "images/honorees/rocio-saez.jpg"},
     {name: "Marcelo Bravo", role: "Representante Nacional FIRST Global Challenge", description: "Marcelo Bravo es profesor de electrónica con 15 años de trayectoria en la enseñanza. Ingeniero Electrónico, Magister en educación, ha dedicado gran parte de su carrera a formar jóvenes en el ámbito de la electrónica y la robótica. Su vasta experiencia y pasión por la educación tecnológica lo convierten en una pieza clave en el desarrollo y éxito del equipo de robótica.", imageUrl: "images/honorees/marcelo-bravo.jpg"},
-    {name: "Donaciones 2024", role: "Reconocimiento especial", description: "Queremos agradecer enormemente a Diego Caroca, Kenneth Edward, Patricia Ceballos y Miguel Candia por los significantes aportes monetarios otorgados a la selección nacional de robótica durante el año 2024.", imageUrl: "images/honorees/donations.png"}
+    {name: "Donaciones 2024", role: "Reconocimiento especial", description: "Queremos agradecer enormemente a: <br>Diego Caroca,<br>Kenneth Edward,<br>Patricia Ceballos,<br>Miguel Candia<br><br> Por los significantes aportes monetarios otorgados a la selección nacional de robótica durante el año 2024. <br><br> Todo el team agradece profundamente no solo su donación, sino también su apoyo frente a la causa de FIRST Global Chile.", imageUrl: "images/honorees/donations.png"}
 ];
 
 let currentHonoreeIndex = 0;
@@ -192,9 +192,9 @@ function updateHonoree(index) {
     const imgElement = document.getElementById('honoree-img');
 
     setTimeout(() => {
-        nameElement.textContent = honoree.name;
-        roleElement.textContent = honoree.role;
-        descriptionElement.textContent = honoree.description;
+        nameElement.innerHTML = honoree.name;
+        roleElement.innerHTML = honoree.role;
+        descriptionElement.innerHTML = honoree.description;
         imgElement.style.backgroundImage = `url(${honoree.imageUrl})`;
     }, 300);
 }

@@ -568,6 +568,7 @@ h1, h2, p {
 }
 
 .mentions-container {
+    width: 90%;
     margin: 2px;
     background-color: white;
     border-radius: 40px;
