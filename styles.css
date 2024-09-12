@@ -533,12 +533,16 @@ h1, h2, p {
     background-color: white;
 }
 
-.patrocinadores {
+.patrocinadores, .grandes-patrocinadores {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
     justify-content: space-around;
     align-items: center;
+}
+
+.grandes-patrocinadores {
+    justify-content: space-evenly;
 }
 
 .patrocinadores img {
@@ -549,7 +553,15 @@ h1, h2, p {
     transition: transform 0.3s ease-out;
 }
 
-.patrocinadores img:hover {
+.grandes-patrocinadores img {
+    cursor: pointer;
+    width: 220px;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-out;
+}
+
+.patrocinadores img:hover, .grandes-patrocinadores img:hover {
     transform: translateY(-20px);
 }
 
